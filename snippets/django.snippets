@@ -109,3 +109,51 @@ snippet stackedinline
 		model = $1
 		extra = ${2:3}
 
+snippet utfc
+	# -*- coding: utf-8 -*-
+
+snippet cbvimp
+	from django.views import generic as cbv
+
+snippet templateview
+	class ${1:Template}View(cbv.TemplateView):
+		'''
+		${2:Description}
+		'''
+		tem@hkлооlate_name='${3:template}.html'
+
+snippet detailview
+	class ${1:ModelName}View(cbv.DetailView):
+		'''
+		${2:Description}
+		'''
+		model = ${1}
+		template_name = '${3:template}.html'
+
+snippet listview
+	class ${1:ModelName}ListView(cbv.ListView):
+		'''
+		${2:Description}
+		'''
+		model = ${1}
+		template_name = '${3:template}.html'
+
+snippet formview
+	class ${1:Form}View(cbv.FormView):
+	    '''
+		${2:Description}
+		'''
+		form_class = ${1}
+		template_name = '${3:tempalte}.html'
+		success_url = '${4:/}'
+
+snippet modelformview
+	class ${1:Model}FormView(cbv.ModelFormView):
+	    '''
+		${2:Description}
+		'''
+		model = ${1}
+		form_class = ${3:Form}
+		template_name = '${4:template}.html'
+		success_url = '${4:/}'
+
